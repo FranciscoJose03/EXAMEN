@@ -2,7 +2,6 @@ import express from "npm:express@4.18.2";
 import mongoose from "npm:mongoose@7.6.3";
 
 import getContactos from "./resolvers/getContactos.ts";
-//import getInfo from "./resolvers/getInfo.ts";
 import postContactos from "./resolvers/postContactos.ts";
 import putContactos from "./resolvers/putContactos.ts";
 import deletePerson from "./resolvers/deleteContacto.ts";
@@ -23,7 +22,6 @@ const app = express();
 app.use(express.json());
 app
     .get("/api/contactos", getContactos)
-    //.get("/api/contactos/:DNI", getInfo)
     .post("/api/contactos", postContactos)
     .put("/api/contactos/:DNI", putContactos)
     .delete("/api/contactos/:DNI", deletePerson)
